@@ -3,42 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Justiti - Projects</title>
+    <title>Projects - Juan Justiti</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <header>
+        <img src="your-photo.jpg" alt="Juan Justiti" class="profile-photo">
         <nav>
-            <div class="container">
-                <a href="index.html" class="logo">Juan Justiti</a>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="project.html" class="nav-link">Projects</a>
+            <a href="article.html" class="nav-link">Articles</a>
+            <a href="contact.html" class="nav-link">Contact</a>
         </nav>
     </header>
-    
-    <section id="projects" class="container">
+    <main>
         <h1>Projects</h1>
-        <article>
-            <h2>Project Title 1</h2>
-            <p>Description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </article>
-        <article>
-            <h2>Project Title 2</h2>
-            <p>Description of the project. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </article>
-        <!-- Add more projects as needed -->
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Juan Justiti. All rights reserved.</p>
+        <div class="chart-container">
+            <canvas id="projectChart"></canvas>
         </div>
+        <script>
+            var ctx = document.getElementById('projectChart').getContext('2d');
+            var projectChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Project A', 'Project B', 'Project C'],
+                    datasets: [{
+                        label: 'Completion Status',
+                        data: [12, 19, 3],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2024 Juan Justiti</p>
     </footer>
 </body>
 </html>
