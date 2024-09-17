@@ -1,107 +1,48 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Additional Styles for Articles */
+article {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 20px 0;
 }
 
-/* Color Variables */
-:root {
-    --primary-color: #333; /* Dark Gray */
-    --secondary-color: #fff; /* White */
-    --accent-color: #007bff; /* Blue */
-    --text-color: #555; /* Medium Gray */
-    --background-color: #f8f9fa; /* Light Gray */
-}
-
-/* Body */
-body {
-    font-family: 'Georgia', serif;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    line-height: 1.6;
-    padding-top: 60px; /* Adjust to accommodate fixed header */
-}
-
-/* Header */
-header {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
+article h2 {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--secondary-color);
-    text-decoration: none;
+    margin-bottom: 10px;
 }
 
-.nav-menu {
-    list-style: none;
+article p.date {
+    color: #999;
+    font-size: 0.9rem;
+}
+
+/* Form Styles */
+form {
     display: flex;
+    flex-direction: column;
 }
 
-.nav-menu li {
-    margin: 0 15px;
+form label {
+    margin-top: 10px;
+    font-weight: bold;
 }
 
-.nav-menu a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 5px 10px;
-    transition: background 0.3s;
-}
-
-.nav-menu a:hover {
-    background: var(--accent-color);
-    color: var(--secondary-color);
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-/* Hero Section */
-.hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: var(--accent-color);
     color: var(--secondary-color);
-    text-align: center;
-    padding: 60px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-/* Footer */
-footer {
-    background: var(--primary-color);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer p {
-    font-size: 0.9rem;
+form button:hover {
+    background-color: darken(var(--accent-color), 10%);
 }
