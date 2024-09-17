@@ -7,26 +7,27 @@
 
 /* Color Variables */
 :root {
-    --primary-color: #34495e; /* Dark Grayish Blue */
-    --secondary-color: #f5f5f5; /* Light Gray */
-    --accent-color: #1abc9c;   /* Teal */
-    --text-color: #2c3e50;     /* Dark Grayish Blue */
-    --background-color: #ecf0f1; /* Light Gray */
+    --primary-color: #333; /* Dark Gray */
+    --secondary-color: #fff; /* White */
+    --accent-color: #007bff; /* Blue */
+    --text-color: #555; /* Medium Gray */
+    --background-color: #f8f9fa; /* Light Gray */
 }
 
 /* Body */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Georgia', serif;
     color: var(--text-color);
     background-color: var(--background-color);
     line-height: 1.6;
+    padding-top: 60px; /* Adjust to accommodate fixed header */
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    background: var(--primary-color);
     color: var(--secondary-color);
-    padding: 20px 0;
+    padding: 10px 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -39,79 +40,58 @@ nav {
     justify-content: center;
 }
 
-nav ul {
+.container {
+    width: 80%;
+    margin: 0 auto;
     display: flex;
-    list-style: none;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav ul li {
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+}
+
+.nav-menu li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.nav-menu a {
     color: var(--secondary-color);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 18px;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background 0.3s;
 }
 
-nav ul li a:hover {
-    color: var(--accent-color);
-    transform: scale(1.1);
+.nav-menu a:hover {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    border-radius: 5px;
 }
 
-/* Main Sections */
-section {
-    padding: 80px 20px;
-    margin: 20px auto;
-    max-width: 1200px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-#home {
+/* Hero Section */
+.hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    color: var(--secondary-color);
     text-align: center;
-    background: url('https://via.placeholder.com/1600x400') no-repeat center center/cover;
-    color: #fff;
-    padding: 120px 20px;
+    padding: 60px 20px;
 }
 
-#home h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-#home p {
-    font-size: 1.2rem;
-    margin-top: 0;
-}
-
-#about, #projects, #contact {
-    background: #fff;
-    border-radius: 10px;
-    padding: 40px;
-    margin: 20px 0;
-}
-
-/* Typography */
-h1, h2, h3 {
-    color: var(--primary-color);
-}
-
-h1 {
+.hero h1 {
     font-size: 2.5rem;
 }
 
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+.hero p {
+    font-size: 1.2rem;
 }
 
 /* Footer */
@@ -119,42 +99,9 @@ footer {
     background: var(--primary-color);
     color: var(--secondary-color);
     text-align: center;
-    padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 10px 0;
 }
 
-/* Buttons */
-button, a.button {
-    background-color: var(--accent-color);
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-button:hover, a.button:hover {
-    background-color: #16a085; /* Slightly darker teal */
-    transform: scale(1.05);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    #home h1 {
-        font-size: 2rem;
-    }
+footer p {
+    font-size: 0.9rem;
 }
