@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Juan Justiti</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="your-photo.jpg" alt="Juan Justiti" class="profile-photo">
-        <nav>
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="project.html" class="nav-link">Projects</a>
-            <a href="article.html" class="nav-link">Articles</a>
-            <a href="contact.html" class="nav-link">Contact</a>
+        <div class="header-left">
+            <img src="your-photo.jpg" alt="Juan Justiti" class="profile-photo">
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="article.html">Articles</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
+
     <main>
-        <h1>Contact</h1>
-        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-            
-            <button type="submit" class="btn-primary">Send</button>
-        </form>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form action="/send-email" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
+
     <footer>
-        <p>About | Contact</p>
+        <p>&copy; 2024 Juan Justiti. All rights reserved.</p>
     </footer>
 </body>
 </html>
