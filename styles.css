@@ -1,83 +1,42 @@
-/* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
-    color: #212529;
 }
 
 header {
-    background: #343a40;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.nav-menu {
     display: flex;
-    justify-content: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6495ED;
+    padding: 10px 20px;
+    color: white;
 }
 
-.nav-menu li {
-    margin: 0 15px;
+.profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }
 
-.nav-menu a {
+nav a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    padding: 0 15px;
 }
 
-.nav-menu a:hover {
-    color: #adb5bd;
+nav a:hover {
+    text-decoration: underline;
 }
 
-.hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5em;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.2em;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
+main {
     padding: 20px;
 }
 
-section {
-    padding: 60px 0;
-}
-
-h2 {
-    border-bottom: 2px solid #343a40;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
 footer {
-    background: #343a40;
-    color: white;
+    background-color: #f8f9fa;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
     position: fixed;
     bottom: 0;
     width: 100%;
