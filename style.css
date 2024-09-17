@@ -68,3 +68,14 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
